@@ -6,19 +6,17 @@ This project implements an interpretable Convolutional Neural Network (CNN) for 
 1. [Overview](#project-overview)
 2. [Key Features](#key-features)
 3. [Tech Stack](#tech-stack)
-5. [Architecture and Methodology](#architecture-and-methodology)
-6. [Performance Results](#performance-results)
-7. [Interpretability with Grad-CAM](#Interpretability-with-Grad-CAM)
-9. [Manual Setup](#manual-setup)
-10. [Training Logs](#training-logs)
-11. [Project Structure](#project-structure)
-12. [References](#references)
-13. [Contributing](#contributing)
-14. [License](#license)
-15. [Acknowledgments](#acknowledgments)
+4. [Architecture and Methodology](#architecture-and-methodology)
+5. [Performance Results](#performance-results)
+6. [Interpretability with Grad-CAM](#Interpretability-with-Grad-CAM)
+7. [Manual Setup](#manual-setup)
+8. [Training Logs](#training-logs)
+9. [Project Structure](#project-structure)
+10. [References](#references)
+11. [Contributing](#contributing)
+12. [License](#license)
+13. [Acknowledgments](#acknowledgments)
 
-
-[Project Structure](#project-structure)
 
 ## Overview
 
