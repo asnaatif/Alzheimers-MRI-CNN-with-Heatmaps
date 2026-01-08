@@ -12,10 +12,11 @@ This project implements an interpretable Convolutional Neural Network (CNN) for 
 7. [Manual Setup](#manual-setup)
 8. [Training Logs](#training-logs)
 9. [Project Structure](#project-structure)
-10. [References](#references)
-11. [Contributing](#contributing)
-12. [License](#license)
-13. [Acknowledgments](#acknowledgments)
+10. [Conference Paper](#conference-paper)
+11. [References](#references)
+12. [Contributing](#contributing)
+13. [License](#license)
+14. [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -207,12 +208,13 @@ Project/
 ├── phase1_log.csv              # Phase 1 training logs
 └── phase2_log.csv              # Phase 2 training logs
 ```
-
+## Conference Paper
+This work has been submitted to an academic conference and is currently under review.
+Link to the paper: 
 
 ## References
 
-- [Dataset Source](Dataset Description and Source Doc.pdf)
-- [IEEE Conference Paper](IEEE Conference Paper.pdf)
+- Dataset Source: https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset 
 - ResNet50: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - Grad-CAM: [Grad-CAM: Visual Explanations from Deep Networks](https://arxiv.org/abs/1610.02391)
 
