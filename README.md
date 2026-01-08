@@ -2,7 +2,25 @@
 
 This project implements an interpretable Convolutional Neural Network (CNN) for classifying Alzheimer's disease stages using MRI brain scans. The model uses ResNet50 architecture with Grad-CAM visualization to provide explainable predictions through heatmaps that highlight regions of the brain most influential to the classification decision.
 
-## 🎯 Project Overview
+## Table of Contents: 
+1. [Overview](#project-overview)
+2. [Key Features](#key-features)
+3. [Tech Stack](#tech-stack)
+5. [Architecture and Methodology](#architecture-and-methodology)
+6. [Performance Results](#performance-results)
+7. [Interpretability with Grad-CAM](#Interpretability-with-Grad-CAM)
+9. [Manual Setup](#manual-setup)
+10. [Training Logs](#training-logs)
+11. [Project Structure](#project-structure)
+12. [References](#references)
+13. [Contributing](#contributing)
+14. [License](#license)
+15. [Acknowledgments](#acknowledgments)
+
+
+[Project Structure](#project-structure)
+
+## Overview
 
 Alzheimer's disease is a progressive neurodegenerative disorder that affects millions worldwide. Early detection and accurate staging are crucial for effective treatment and patient care. This project leverages deep learning to classify MRI images into four Alzheimer's disease stages:
 
@@ -11,7 +29,66 @@ Alzheimer's disease is a progressive neurodegenerative disorder that affects mil
 - **Mild Demented**: Noticeable cognitive decline
 - **Moderate Demented**: Significant impairment requiring assistance
 
-## 🏗️ Architecture & Methodology
+## Key Features
+
+- **Four-Class Alzheimer’s Classification**  
+  Classifies MRI brain scans into four stages: Non Demented, Very Mild Demented, Mild Demented, and Moderate Demented.
+
+- **CNN-Based Deep Learning Model**  
+  Utilizes a ResNet50 backbone with transfer learning for robust feature extraction and high classification accuracy.
+
+- **Two-Phase Training Strategy**  
+  Implements frozen-backbone training followed by fine-tuning to improve generalization and performance.
+
+- **Explainable AI with Grad-CAM**  
+  Generates class-specific heatmaps highlighting brain regions most influential in the model’s predictions.
+
+- **Integrated Gradients Interpretability**  
+  Provides additional gradient-based attribution to support and validate Grad-CAM explanations.
+
+- **High Performance Metrics**  
+  Evaluates the model using accuracy, precision, recall, F1-score, and confusion matrix across all classes.
+
+- **Stability Analysis of Explanations**  
+  Assesses robustness of Grad-CAM heatmaps using SSIM-based consistency evaluation under perturbations.
+
+- **End-to-End MRI Pipeline**  
+  Covers preprocessing, augmentation, training, evaluation, and interpretability within a single workflow.
+
+- **Visualization & Analysis Tools**  
+  Includes overlayed heatmaps, training logs, metric plots, and confusion matrix visualizations.
+
+- **Research & Education Oriented**  
+  Designed for academic use, reproducibility, and interpretability-focused deep learning research.
+
+
+## Tech Stack
+
+### Deep Learning & ML
+- **TensorFlow / Keras** – Model development, training, and fine-tuning
+- **ResNet50** – Pre-trained CNN backbone (ImageNet)
+- **Grad-CAM** – Visual interpretability via class activation maps
+- **Integrated Gradients** – Gradient-based attribution for model explanations
+
+### Data Processing & Evaluation
+- **NumPy** – Numerical operations
+- **Pandas** – Data handling and logging
+- **Scikit-learn** – Evaluation metrics (precision, recall, F1-score, confusion matrix)
+- **Split-Folders** – Dataset splitting (train/validation/test)
+
+### Image Processing & Visualization
+- **OpenCV** – Image preprocessing and heatmap overlay
+- **Matplotlib** – Plotting and visualizations
+- **Seaborn** – Confusion matrix and metric visualization
+
+### Hardware Acceleration
+- **Apple Silicon (MPS)** – GPU acceleration via `tensorflow-metal`
+
+### Development Environment
+- **Jupyter Notebook** – Experimentation and training workflow
+- **Python 3.x** – Core programming language
+
+## Architecture and Methodology
 
 ### Model Architecture
 - **Base Model**: ResNet50 (pre-trained on ImageNet)
@@ -38,7 +115,7 @@ The model employs a two-phase training approach:
 - Horizontal/vertical flipping
 - Fill mode: nearest
 
-## 📊 Performance Results
+## Performance Results
 
 The model achieves **98.6% validation accuracy** with the following metrics:
 
@@ -51,7 +128,7 @@ The model achieves **98.6% validation accuracy** with the following metrics:
 
 **Overall Accuracy**: 98.6%
 
-## 🔍 Interpretability with Grad-CAM
+## Interpretability with Grad-CAM
 
 The project implements Gradient-weighted Class Activation Mapping (Grad-CAM) to provide visual explanations:
 
@@ -65,24 +142,7 @@ Key features:
 - Color-coded heatmap overlay
 - Batch processing for multiple images
 
-## 📁 Project Structure
-
-```
-Project/
-├── alz_split/                    # Train/val/test splits
-│   ├── train/
-│   ├── val/
-│   └── test/
-├── combined_images/              # Raw dataset
-├── DL_project_Resnet.ipynb       # Main implementation
-├── alzheimer_resnet50_model.keras # Final trained model
-├── phase1_model.keras           # Phase 1 model checkpoint
-├── phase2_model.keras           # Phase 2 model checkpoint
-├── phase1_log.csv              # Phase 1 training logs
-└── phase2_log.csv              # Phase 2 training logs
-```
-
-## 🚀 Getting Started
+## Manual Setup
 
 ### Prerequisites
 
@@ -121,7 +181,7 @@ Execute the Grad-CAM section to:
 - Compute stability scores
 - Visualize model explanations
 
-## 📈 Training Logs
+## Training Logs
 
 ### Phase 1 (Frozen Backbone)
 - **Best Validation Accuracy**: 93.2%
@@ -133,31 +193,40 @@ Execute the Grad-CAM section to:
 - **Training Duration**: ~19 epochs
 - **Loss**: Categorical Crossentropy
 
-## 🛠️ Key Technologies
+## Project Structure
 
-- **TensorFlow/Keras**: Deep learning framework
-- **ResNet50**: Pre-trained CNN architecture
-- **Grad-CAM**: Interpretability technique
-- **OpenCV**: Image processing
-- **Scikit-learn**: Evaluation metrics
-- **Matplotlib/Seaborn**: Visualization
+```
+Project/
+├── alz_split/                    # Train/val/test splits
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── combined_images/              # Raw dataset
+├── DL_project_Resnet.ipynb       # Main implementation
+├── alzheimer_resnet50_model.keras # Final trained model
+├── phase1_model.keras           # Phase 1 model checkpoint
+├── phase2_model.keras           # Phase 2 model checkpoint
+├── phase1_log.csv              # Phase 1 training logs
+└── phase2_log.csv              # Phase 2 training logs
+```
 
-## 📚 References
+
+## References
 
 - [Dataset Source](Dataset Description and Source Doc.pdf)
 - [IEEE Conference Paper](IEEE Conference Paper.pdf)
 - ResNet50: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - Grad-CAM: [Grad-CAM: Visual Explanations from Deep Networks](https://arxiv.org/abs/1610.02391)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
-## 📄 License
+## License
 
 This project is for educational and research purposes. Please cite appropriately if used in academic work.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Alzheimer's MRI dataset providers
 - TensorFlow and Keras communities
