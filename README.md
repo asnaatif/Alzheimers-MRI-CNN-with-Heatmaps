@@ -3,7 +3,7 @@
 This project implements an interpretable Convolutional Neural Network (CNN) for classifying Alzheimer's disease stages using MRI brain scans. The model uses ResNet50 architecture with Grad-CAM visualization to provide explainable predictions through heatmaps that highlight regions of the brain most influential to the classification decision.
 
 ## Table of Contents: 
-1. [Overview](#project-overview)
+1. [Overview](#overview)
 2. [Key Features](#key-features)
 3. [Tech Stack](#tech-stack)
 4. [Architecture and Methodology](#architecture-and-methodology)
