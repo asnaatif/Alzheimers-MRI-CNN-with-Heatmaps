@@ -210,6 +210,7 @@ Project/
 ```
 ## Conference Paper
 This work has been submitted to an academic conference and is currently under review.
+
 Link to the paper: [Conference Paper](IEEE%20Conference%20Paper.pdf)
 
 ## References
