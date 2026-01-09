@@ -1,4 +1,4 @@
-# Interpretable CNN Classification of Alzheimer's Disease via MRI Heatmaps
+# Alzheimers MRI CNN with Heatmaps
 
 This project implements an interpretable Convolutional Neural Network (CNN) for classifying Alzheimer's disease stages using MRI brain scans. The model uses ResNet50 architecture with Grad-CAM visualization to provide explainable predictions through heatmaps that highlight regions of the brain most influential to the classification decision.
 
